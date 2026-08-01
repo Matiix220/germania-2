@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="pl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="GERMANIA — części samochodowe."><meta name="theme-color" content="#050608"><title>Części samochodowe | GERMANIA</title><link rel="icon" href="assets/images/favicon.png"><link rel="stylesheet" href="assets/css/styles.css"></head>
+<body data-page="parts" data-catalog="parts">
+<div id="site-header"></div>
+<main>
+<section class="page-hero" data-word="CZĘŚCI"><div class="container"><div class="breadcrumbs"><a href="index.html">Start</a> / <span>Części samochodowe</span></div><span class="eyebrow">Katalog części</span><h1>Części samochodowe</h1><p class="lead">Części eksploatacyjne, podzespoły i elementy performance do niemieckich samochodów. Skorzystaj z filtrów albo napisz do nas z numerem VIN.</p></div></section>
+<section class="section"><div class="container">
+<div class="filter-shell">
+<aside class="filters" id="filters"><h3>Filtry <button class="icon-btn mobile-filter-button" data-filter-toggle aria-label="Zamknij filtry">✕</button></h3>
+<div class="filter-group"><label for="filterSearch">Szukaj w katalogu</label><input class="input" id="filterSearch" placeholder="Nazwa, marka, opis..."></div>
+<div class="filter-group"><label for="filterCategory">Kategoria</label><select class="select" id="filterCategory"></select></div>
+<div class="filter-group"><label for="filterBrand">Marka / linia</label><select class="select" id="filterBrand"></select></div>
+<div class="filter-group"><label for="filterCondition">Typ oferty</label><select class="select" id="filterCondition"></select></div>
+<div class="filter-group"><label for="filterPrice">Cena maksymalna</label><div class="range-row"><input class="range" type="range" min="0" step="50" id="filterPrice"><output id="priceOutput"></output></div></div>
+<div class="filter-group"><label class="check-row"><input type="checkbox" id="filterAvailability"> Tylko dostępne</label></div>
+<button class="btn btn-secondary btn-small" style="width:100%" id="clearFilters">Wyczyść filtry</button>
+</aside>
+<div class="catalog-area">
+<div class="catalog-toolbar"><div><button class="btn btn-secondary btn-small mobile-filter-button" data-filter-toggle>☰ Filtry</button><div class="result-count" id="resultCount"></div></div><div class="toolbar-controls"><select class="select" id="sortCatalog"><option value="featured">Polecane</option><option value="price-asc">Cena: rosnąco</option><option value="price-desc">Cena: malejąco</option><option value="name">Nazwa A–Z</option><option value="stock">Dostępność</option></select></div></div>
+<div class="catalog-grid" id="catalogGrid"></div>
+</div></div>
+</div></section>
+<section class="section-tight"><div class="container"><div class="panel reveal"><span class="eyebrow">Ważna informacja</span><h3>Zakup bez zgadywania</h3><p class="muted">Nie masz pewności, czy część pasuje? Wyślij numer VIN przez formularz kontaktowy — pomożemy zweryfikować dopasowanie przed zakupem.</p><a class="arrow-link" href="kontakt.html">Skontaktuj się z doradcą →</a></div></div></section>
+</main><div id="site-footer"></div>
+<script src="assets/js/data.js"></script><script src="assets/js/main.js"></script><script src="assets/js/catalog.js"></script>
+</body></html>

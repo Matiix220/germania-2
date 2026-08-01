@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <meta name="theme-color" content="#050608">
+  <title>Panel GERMANIA</title>
+  <link rel="icon" href="../assets/images/favicon.png">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="stylesheet" href="../assets/css/admin.css">
+</head>
+<body class="admin-body admin-panel-body">
+<div class="admin-layout">
+  <aside class="admin-sidebar" id="adminSidebar">
+    <a class="admin-brand" href="../index.html"><img src="../assets/images/logo-header.png" alt="GERMANIA"><span>CONTROL ROOM</span></a>
+    <div class="admin-system-status"><i></i><div><b>System online</b><span>Local demo environment</span></div></div>
+    <nav class="admin-nav" aria-label="Panel administracyjny">
+      <button class="active" data-view="dashboard"><i>⌁</i><span>Pulpit</span><b>01</b></button>
+      <button data-view="products"><i>◆</i><span>Produkty i usługi</span><b>02</b></button>
+      <button data-view="posts"><i>▤</i><span>Aktualności</span><b>03</b></button>
+      <button data-view="messages"><i>✉</i><span>Wiadomości <em id="unreadBadge"></em></span><b>04</b></button>
+    </nav>
+    <div class="admin-sidebar-foot">
+      <div class="session-card"><span>SESJA WŁAŚCICIELA</span><div><i></i><b>Aktywna</b></div></div>
+      <a class="btn btn-secondary btn-small" href="../index.html">← Otwórz stronę</a>
+      <button class="btn btn-danger btn-small" id="logoutButton">Wyloguj</button>
+    </div>
+  </aside>
+
+  <main class="admin-main">
+    <header class="admin-topbar">
+      <div class="admin-topbar-left"><button class="icon-btn admin-mobile-toggle" id="adminMenuToggle" aria-label="Otwórz menu">☰</button><div><b>GERMANIA Control Room</b><span id="adminDate">Centrum zarządzania</span></div></div>
+      <div class="admin-topbar-right"><span class="admin-live"><i></i> LIVE</span><time id="adminClock">--:--</time><span class="admin-avatar">G</span></div>
+    </header>
+
+    <div class="admin-content">
+      <section class="admin-view active" id="view-dashboard">
+        <div class="admin-welcome">
+          <div><span class="eyebrow">Centrum dowodzenia</span><h1>Witaj w GERMANIA.</h1><p>Oferta, treści i kontakt z klientem — wszystko pod kontrolą.</p><div class="welcome-actions"><button class="btn btn-primary" data-view-jump="products">+ Dodaj ofertę</button><button class="btn btn-secondary" data-view-jump="posts">+ Opublikuj artykuł</button></div></div>
+          <div class="welcome-orbit" aria-hidden="true"><span>G</span><i></i><i></i><i></i></div>
+        </div>
+
+        <div class="stat-grid">
+          <article class="stat-card stat-yellow"><div class="stat-icon">◆</div><div><span>Produkty i usługi</span><strong id="statProducts">0</strong><small>pełna oferta sklepu</small></div><em>+ aktywne</em></article>
+          <article class="stat-card stat-red"><div class="stat-icon">▤</div><div><span>Artykuły</span><strong id="statPosts">0</strong><small>magazyn GERMANIA</small></div><em>content</em></article>
+          <article class="stat-card stat-green"><div class="stat-icon">✉</div><div><span>Nowe wiadomości</span><strong id="statUnread">0</strong><small>wymagają odpowiedzi</small></div><em>inbox</em></article>
+          <article class="stat-card stat-blue"><div class="stat-icon">🛒</div><div><span>Koszyk testowy</span><strong id="statCart">0</strong><small>pozycje klienta</small></div><em>live</em></article>
+        </div>
+
+        <div class="admin-dashboard-grid">
+          <section class="analytics-card">
+            <div class="analytics-head"><div><span class="eyebrow">Aktywność sklepu</span><h3>Panel operacyjny</h3></div><span class="range-pill">Ostatnie 7 dni</span></div>
+            <div class="analytics-numbers"><div><span>Gotowość katalogu</span><strong>86%</strong></div><div><span>Treści</span><strong>72%</strong></div><div><span>Obsługa zapytań</span><strong>94%</strong></div></div>
+            <div class="admin-chart" aria-label="Przykładowy wykres aktywności"><span class="chart-line"></span><svg viewBox="0 0 700 210" preserveAspectRatio="none"><defs><linearGradient id="chartFill" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f4c900" stop-opacity=".3"/><stop offset="1" stop-color="#f4c900" stop-opacity="0"/></linearGradient></defs><path class="chart-area" d="M0 180 C80 160 110 95 190 125 S300 170 355 98 S455 50 520 88 S620 105 700 25 L700 210 L0 210Z"/><path class="chart-path" d="M0 180 C80 160 110 95 190 125 S300 170 355 98 S455 50 520 88 S620 105 700 25"/></svg><div class="chart-labels"><span>Pn</span><span>Wt</span><span>Śr</span><span>Cz</span><span>Pt</span><span>So</span><span>Nd</span></div></div>
+          </section>
+          <section class="quick-panel"><span class="eyebrow">Szybkie akcje</span><h3>Co robimy dalej?</h3><button data-view-jump="products"><i>+</i><span><b>Nowa oferta</b><small>Produkt, akcesorium lub usługa</small></span><em>→</em></button><button data-view-jump="posts"><i>▤</i><span><b>Nowy artykuł</b><small>Publikacja w magazynie</small></span><em>→</em></button><button data-view-jump="messages"><i>✉</i><span><b>Otwórz skrzynkę</b><small>Zapytania od klientów</small></span><em>→</em></button></section>
+        </div>
+
+        <div class="admin-bottom-grid">
+          <section class="admin-panel-card"><div class="panel-card-head"><div><span class="eyebrow">Ostatnie wiadomości</span><h3>Skrzynka kontaktowa</h3></div><button class="text-button" data-view-jump="messages">Zobacz wszystkie →</button></div><div id="dashboardMessages" class="admin-list compact"></div></section>
+          <section class="admin-panel-card"><span class="eyebrow">System check</span><h3>Przed publikacją</h3><div class="checklist"><div><i>✓</i><span><b>Projekt i interakcje</b><small>Warstwa demonstracyjna gotowa</small></span></div><div><i>!</i><span><b>Backend i baza danych</b><small>Wymagane przed wdrożeniem</small></span></div><div><i>!</i><span><b>Płatności i wysyłka</b><small>Wymagają integracji</small></span></div><div><i>!</i><span><b>Logowanie produkcyjne</b><small>Wymaga serwera i bezpiecznych sesji</small></span></div></div></section>
+        </div>
+      </section>
+
+      <section class="admin-view" id="view-products">
+        <div class="admin-heading"><div><span class="eyebrow">Zarządzanie ofertą</span><h1>Produkty i usługi</h1><p>Nowa pozycja pojawi się na wybranej stronie katalogu w tej przeglądarce.</p></div><span class="view-code">CATALOG / 02</span></div>
+        <div class="admin-grid">
+          <form class="admin-form" id="productForm">
+            <div class="form-title"><div><span>NOWA POZYCJA</span><h3>Dodaj ofertę</h3></div><i>◆</i></div>
+            <div class="form-grid">
+              <div class="form-field"><label>Rodzaj katalogu</label><select class="select" name="group" required><option value="parts">Części</option><option value="accessories">Akcesoria</option><option value="gadgets">Gadżety</option><option value="services">Usługi</option></select></div>
+              <div class="form-field"><label>Nazwa *</label><input class="input" name="name" required placeholder="Np. Zestaw klocków ceramicznych"></div>
+              <div class="form-field"><label>Kategoria *</label><input class="input" name="category" required placeholder="Np. Hamulce"></div>
+              <div class="form-field"><label>Marka / linia *</label><input class="input" name="brand" required placeholder="Np. ATE"></div>
+              <div class="form-field form-split"><div><label>Cena (PLN) *</label><input class="input" name="price" type="number" min="0" step="0.01" required></div><div><label>Stara cena</label><input class="input" name="oldPrice" type="number" min="0" step="0.01"></div></div>
+              <div class="form-field form-split"><div><label>Stan / terminy</label><input class="input" name="stock" type="number" min="0" value="1" required></div><div><label>Typ</label><input class="input" name="condition" value="Nowe"></div></div>
+              <div class="form-field form-split"><div><label>Ikona emoji</label><input class="input" name="icon" value="📦" maxlength="4"></div><div><label>Etykieta</label><input class="input" name="badge" placeholder="Nowość"></div></div>
+              <div class="form-field"><label>Opis *</label><textarea class="textarea" name="description" required placeholder="Najważniejsze korzyści i zastosowanie produktu..."></textarea></div>
+              <button class="btn btn-primary" type="submit">Dodaj do oferty →</button>
+            </div>
+          </form>
+          <div class="admin-list-column">
+            <div class="live-preview"><div class="preview-label"><i></i> PODGLĄD NA ŻYWO</div><div id="productPreview" class="preview-product"></div></div>
+            <div class="admin-list-toolbar"><div><strong>Dodane przez panel</strong><span id="customProductCount"></span></div><span class="toolbar-code">LOCAL DATA</span></div>
+            <div class="admin-list" id="adminProductList"></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="admin-view" id="view-posts">
+        <div class="admin-heading"><div><span class="eyebrow">Magazyn GERMANIA</span><h1>Aktualności</h1><p>Publikuj artykuły widoczne na stronie aktualności i stronie głównej.</p></div><span class="view-code">CONTENT / 03</span></div>
+        <div class="admin-grid">
+          <form class="admin-form" id="postForm">
+            <div class="form-title"><div><span>NOWA PUBLIKACJA</span><h3>Dodaj artykuł</h3></div><i>▤</i></div>
+            <div class="form-grid">
+              <div class="form-field"><label>Tytuł *</label><input class="input" name="title" required placeholder="Mocny, konkretny tytuł"></div>
+              <div class="form-field form-split"><div><label>Kategoria *</label><input class="input" name="category" required placeholder="Technika"></div><div><label>Data *</label><input class="input" name="date" type="date" required></div></div>
+              <div class="form-field"><label>Ikona emoji</label><input class="input" name="icon" value="📰" maxlength="4"></div>
+              <div class="form-field"><label>Krótki wstęp *</label><textarea class="textarea" name="lead" required style="min-height:100px" placeholder="Zachęć czytelnika w 2–3 zdaniach..."></textarea></div>
+              <div class="form-field"><label>Treść artykułu *</label><textarea class="textarea" name="content" required placeholder="Oddzielaj akapity pustą linią." style="min-height:230px"></textarea></div>
+              <button class="btn btn-primary" type="submit">Opublikuj artykuł →</button>
+            </div>
+          </form>
+          <div class="admin-list-column">
+            <div class="live-preview"><div class="preview-label"><i></i> PODGLĄD PUBLIKACJI</div><div id="postPreview" class="preview-post"></div></div>
+            <div class="admin-list-toolbar"><div><strong>Artykuły z panelu</strong><span id="customPostCount"></span></div><span class="toolbar-code">MAGAZINE</span></div>
+            <div class="admin-list" id="adminPostList"></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="admin-view" id="view-messages">
+        <div class="admin-heading"><div><span class="eyebrow">Kontakt z klientami</span><h1>Wiadomości</h1><p>Zapytania przesłane przez formularz kontaktowy w tej przeglądarce.</p></div><button class="btn btn-secondary" id="markAllRead">Oznacz wszystkie jako przeczytane</button></div>
+        <div class="inbox-toolbar"><div class="inbox-search"><span>⌕</span><input id="messageSearch" placeholder="Szukaj po temacie, nazwie lub adresie e-mail..."></div><span class="admin-live"><i></i> Skrzynka aktywna</span></div>
+        <div class="admin-list messages-list" id="messageList"></div>
+      </section>
+    </div>
+  </main>
+</div>
+<div class="toast-stack" id="toastStack"></div>
+<script src="../assets/js/data.js"></script><script src="panel.js"></script>
+</body>
+</html>

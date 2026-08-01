@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <meta name="theme-color" content="#050608">
+  <title>GERMANIA Control Room</title>
+  <link rel="icon" href="../assets/images/favicon.png">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="stylesheet" href="../assets/css/admin.css">
+</head>
+<body class="admin-body admin-login-page">
+  <div class="login-ambient" aria-hidden="true"><i></i><i></i><i></i><span>AUTHORIZED PERSONNEL ONLY</span></div>
+  <main class="admin-login">
+    <section class="login-shell">
+      <div class="login-scan" aria-hidden="true"></div>
+      <a class="login-brand" href="../index.html" aria-label="Wróć do strony GERMANIA"><img src="../assets/images/logo-header.png" alt="GERMANIA"></a>
+      <div class="access-chip"><i></i> SECURE OWNER ACCESS</div>
+      <span class="eyebrow login-eyebrow">Strefa właściciela</span>
+      <h1>CONTROL<br><span>ROOM</span></h1>
+      <p class="lead">Zarządzaj ofertą, publikacjami i zapytaniami klientów z jednego centrum dowodzenia.</p>
+      <form id="loginForm">
+        <div class="form-field">
+          <label for="password">Hasło dostępu</label>
+          <div class="password-shell"><input class="input" id="password" type="password" autocomplete="current-password" placeholder="Wpisz hasło" autofocus><button type="button" id="togglePassword" aria-label="Pokaż hasło">◉</button></div>
+        </div>
+        <button class="btn btn-primary login-submit" id="loginSubmit" type="submit"><span>Odblokuj panel</span><b>→</b></button>
+        <div class="login-status" id="loginStatus" aria-live="polite"></div>
+      </form>
+      <div class="login-security"><span>◈ Sesja 4 h</span><span>◈ Brak indeksowania</span><span>◈ Dostęp prywatny</span></div>
+      <a class="login-back" href="../index.html">← Wróć do sklepu</a>
+    </section>
+  </main>
+  <script src="login.js"></script>
+</body>
+</html>
